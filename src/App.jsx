@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Profile from "./components/Profile";
+import Projects from "./components/Projects";
+import Footer from "./components/Footer";
+import { TranslationProvider } from "./contexts/TranslationContext";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import LanguageSelector from "./components/LanguageSelector";
+import ModeSwitch from "./components/ModeSwitch";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <TranslationProvider>
+      <ThemeProvider>
+        {/* Sayfa arka planı için dinamik sınıflar */}
+        <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
+          {/* ModeSwitch ve LanguageSelector birleştirildi */}
+          <div className="flex items-center justify-end p-4 bg-white dark:bg-gray-800 space-x-4">
+            <ModeSwitch />
+            <LanguageSelector />
+          </div>
+          {/* Diğer bileşenler */}
+          <Header />
+          <Hero />
+          <Profile />
+          <Projects />
+          <Footer />
+        </div>
+      </ThemeProvider>
+    </TranslationProvider>
+  );
 }
 
-export default App
+export default App;
