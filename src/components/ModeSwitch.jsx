@@ -6,9 +6,22 @@ const ModeSwitch = () => {
   const { t } = useContext(TranslationContext);
 
   useEffect(() => {
-    if (isDarkMode) {
+    const savedMode = localStorage.getItem("theme");
+    if (savedMode === "dark") {
+      setIsDarkMode(true);
       document.documentElement.classList.add("dark");
     } else {
+      setIsDarkMode(false);
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isDarkMode) {
+      localStorage.setItem("theme", "dark");
+      document.documentElement.classList.add("dark");
+    } else {
+      localStorage.setItem("theme", "light");
       document.documentElement.classList.remove("dark");
     }
   }, [isDarkMode]);
@@ -18,9 +31,11 @@ const ModeSwitch = () => {
   };
 
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex items-center space-x-2 mr-2">
       <div
-        className={`relative w-12 h-6 flex items-center rounded-full p-1 cursor-pointer bg-custom-purple`}
+        className={`relative w-12 h-6 flex items-center rounded-full p-1 cursor-pointer ${
+          isDarkMode ? "bg-custom-purple dark:bg-[#3A3A3A]" : "bg-custom-purple border border-gray-300"
+        }`}
         onClick={toggleMode}
       >
         <div
@@ -31,15 +46,13 @@ const ModeSwitch = () => {
       </div>
       <span
         className={`text-sm font-medium ${
-          isDarkMode ? "text-[#D9D9D9]" : "text-[#3A3A3A]"
+          isDarkMode ? "text-[#D9D9D9]" : "text-[#2A262B]"
         }`}
       >
         {isDarkMode ? t("LIGHT") : t("DARK MODE")}
       </span>
     </div>
   );
-
-  
 };
 
 export default ModeSwitch;

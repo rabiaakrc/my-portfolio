@@ -11,6 +11,7 @@ export default {
       colors: {
         'custom-purple': '#4832D3',
         'custom-yellow': '#FFE86E', // Sarı renk için örnek hex kodu
+        'dark-bg': '#2A262B',
       },
     },
   },

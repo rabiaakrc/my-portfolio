@@ -8,21 +8,23 @@ import { TranslationProvider } from "./contexts/TranslationContext";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import LanguageSelector from "./components/LanguageSelector";
 import ModeSwitch from "./components/ModeSwitch";
+import MyComponent from "./components/MyComponent";
 
 function App() {
   return (
     <TranslationProvider>
       <ThemeProvider>
         {/* Sayfa arka planı için dinamik sınıflar */}
-        <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
+        <div className="min-h-screen bg-white dark:bg-[#2A262B] text-gray-900 dark:text-gray-100 transition-colors">
           {/* ModeSwitch ve LanguageSelector birleştirildi */}
-          <div className="flex items-center justify-end p-4 bg-white dark:bg-gray-800 space-x-4">
+          <div className="flex items-center justify-end p-4 bg-white dark:bg-[#2A262B] space-x-4">
             <ModeSwitch />
             <LanguageSelector />
           </div>
           {/* Diğer bileşenler */}
           <Header />
           <Hero />
+          <MyComponent/>
           <Profile />
           <Projects />
           <Footer />
