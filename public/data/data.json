@@ -1,0 +1,86 @@
+{
+    "skills": [
+      {
+        "title": "JavaScript",
+        "description": "Experienced in building modern, interactive web applications."
+      },
+      {
+        "title": "React.js",
+        "description": "Proficient in developing scalable and performant React applications."
+      },
+      {
+        "title": "Node.js",
+        "description": "Well-versed in building backend services and APIs."
+      },
+      {
+        "title": "CSS & SCSS",
+        "description": "Expert in styling responsive and modern UIs."
+      },
+      {
+        "title": "TypeScript",
+        "description": "Strongly typed JavaScript with better tooling and safety."
+      },
+      {
+        "title": "Redux",
+        "description": "State management for large-scale applications."
+      },
+      {
+        "title": "Git & Version Control",
+        "description": "Experienced in using Git for version control and collaborative workflows."
+      }
+    ],
+    
+    "projects": [
+        {
+          "name": "Workintech",
+          "description": "A platform connecting tech professionals with job opportunities.",
+          "technologies": ["react", "redux", "axios", "node.js"]
+        },
+        {
+          "name": "Random Jokes",
+          "description": "A simple app that fetches random jokes.",
+          "technologies": ["react", "redux", "axios", "API Integration"]
+        },
+        {
+          "name": "Journey",
+          "description": "A task management application to track personal projects.",
+          "technologies": ["react", "redux", "axios", "node.js", "express"]
+        },
+        {
+          "name": "Portfolio Website",
+          "description": "Showcase personal projects and professional work.",
+          "technologies": ["react", "tailwind CSS", "axios", "dark mode", "translation"]
+        },
+        {
+          "name": "E-commerce Platform",
+          "description": "A complete e-commerce platform for selling products.",
+          "technologies": ["react", "redux", "axios", "node.js", "express", "MongoDB"]
+        }
+      ],
+    "profile": {
+      "birthDate": "24.03.1996",
+      "city": "Ankara",
+      "education": "Hacettepe University, Biology",
+      "preferredRole": "Frontend Developer, UI/UX Designer",
+      "aboutMe": "Passionate frontend developer with experience in building scalable and maintainable web applications. Proficient in React.js, Node.js, and TypeScript, with a strong focus on clean and maintainable code."
+    },
+    "header": {
+        "about_me_title": "About Me",
+    "projects_title": "Projects",
+    "hire_me": "Hire Me"
+     
+    },
+    "hero": {
+        "Almila Su": "Almila Su",
+        "creative_thinker": "Creative thinker",
+        "minimalism_lover": "Minimalism lover",
+        "hero_description": "Hi, I'm Almila. I'm a full-stack developer. If you are looking for a Developer who can craft solid and scalable frontend products with great user experiences, let's shake hands."
+      },
+    "footer": {
+    "footer_heading": "Let’s work together on your next product.",
+    "personal_blog": "Personal Blog",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  }
+  }
+  
