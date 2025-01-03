@@ -11,7 +11,7 @@ const Header = () => {
         A
       </div>
 
-      {/* Navigasyon Linkleri ve Hire Me Butonu */}
+ 
       <div className="flex items-center space-x-8 flex-grow justify-end">
         <nav className="flex space-x-8 text-gray-700 dark:text-gray-300">
           <a href="#skills" className="hover:text-purple-500">
